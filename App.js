@@ -7,7 +7,7 @@
  */
 
 import React, { Component } from 'react';
-import { Container, Header, Content, Footer, FooterTab, Button, Icon, Text, Badge } from 'native-base';
+import { Container, Header, Content, Footer, FooterTab, Button, Icon, Text, Badge, Left, Right, Body, Title } from 'native-base';
 export default class App extends Component {
   constructor() {
     super();
@@ -58,7 +58,17 @@ export default class App extends Component {
   render() {
     return (
       <Container>
-        <Header />
+        <Header>
+        <Left>
+            <Button transparent /*onPress={() => this.props.navigation.goBack()}*/>
+              <Icon name="arrow-back" />
+            </Button>
+          </Left>
+          <Body>
+            <Title style={{width: 200, height: null}}>Awesome Nativve Base</Title>
+          </Body>
+          <Right /> 
+        </Header>
         <Content />
         <Footer>
           <FooterTab>
